@@ -1,1 +1,3 @@
 # distilBERT_symptom_extraction
+
+This project leverages **DistilBERT**, a compact variant of BERT, to extract symptoms from unstructured patient statements. By framing symptom extraction as a **token classification** task, each word in a sentence is labeled as either a symptom or non-symptom. The dataset undergoes data quality checks, ensuring entries are complete before being tokenized and aligned with appropriate labels for training. DistilBERT is fine-tuned on this dataset using Hugging Face’s `Trainer` API, optimizing it for Named Entity Recognition (NER) on symptom terms. A custom function then processes input sentences to identify and extract symptom-related words, enabling symptom recognition in free-text inputs for potential healthcare applications.
